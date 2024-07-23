@@ -29,7 +29,7 @@ export default function Home() {
 
   return (
     <form className="font-bold underline ">
-      <Tabs step={state.step} data={data} />
+      <Tabs step={state.step} data={data} setData={setData} />
       <Buttons prevTab={prevTab} nextTab={nextTab} step={state.step} />
     </form>
   );

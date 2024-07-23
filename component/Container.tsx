@@ -18,7 +18,6 @@ function Container({ children }: { children: React.ReactNode }) {
 
   return (
     <main className="  ">
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
       <div className="">
         <div className=" ">
           <ul className="">
@@ -29,7 +28,10 @@ function Container({ children }: { children: React.ReactNode }) {
                     className={` ${
                       step == indicator.number - 1 ? "text-red-600" : ""
                     } ${
-                      indicator.number == 4 && step === 4 ? "text-red-600" : ""
+                      indicator.number == indicators.length &&
+                      step === indicators.length
+                        ? "text-red-600"
+                        : ""
                     }`}
                   >
                     {indicator.number}
