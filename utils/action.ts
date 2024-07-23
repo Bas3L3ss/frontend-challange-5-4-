@@ -1,9 +1,14 @@
 import { DataType } from "./type-enums";
 
 export function validation(step: number, data: DataType) {
+  let flag = true;
+  return flag;
   switch (step) {
     case 0: {
-      console.log("step 1" + data.name, data.phone, data.email);
+      if (data.name == "" || data.phone == "" || data.email == "") {
+        flag = false;
+      }
+
       break;
     }
     case 1: {
@@ -25,4 +30,5 @@ export function validation(step: number, data: DataType) {
 
     default:
   }
+  return flag;
 }

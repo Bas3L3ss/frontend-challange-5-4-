@@ -1,3 +1,4 @@
+import { useMyContext } from "@/app/provider";
 import { DataType } from "@/utils/type-enums";
 import { Dispatch, SetStateAction } from "react";
 
@@ -8,6 +9,8 @@ function Tab4({
   data: DataType;
   setData: Dispatch<SetStateAction<DataType>>;
 }) {
+  const { state, setState } = useMyContext();
+
   return (
     <div id="tab4">
       <h1>Finishing up</h1>
@@ -20,7 +23,9 @@ function Tab4({
             </h3>
             <p id="pricing">$15/mo</p>
           </div>
-          <p>Change</p>
+          <button type="button" onClick={() => setState({ ...state, step: 1 })}>
+            Change
+          </button>
         </div>
         <div>
           <div className="flex">

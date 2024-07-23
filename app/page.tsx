@@ -1,7 +1,7 @@
 "use client";
 import { useMyContext } from "./provider";
 import { DataType, Plan } from "@/utils/type-enums";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import Buttons from "@/component/Buttons";
 import Tabs from "@/component/Tabs";
 import { validation } from "@/utils/action";
@@ -22,15 +22,22 @@ export default function Home() {
   });
 
   const nextTab = () => {
-    validation(state.step, data);
-    setState({ ...state, step: state.step + 1 });
+    const flag = validation(state.step, data);
+    if (flag) {
+      setState({ ...state, step: state.step + 1 });
+    }
   };
   const prevTab = () => {
     setState({ ...state, step: state.step - 1 });
   };
 
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(data);
+  };
+
   return (
-    <form className="font-bold underline ">
+    <form className="font-bold underline" onSubmit={handleSubmit}>
       <Tabs step={state.step} data={data} setData={setData} />
       <Buttons prevTab={prevTab} nextTab={nextTab} step={state.step} />
     </form>
