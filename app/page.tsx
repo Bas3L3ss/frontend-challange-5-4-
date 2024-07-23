@@ -2,7 +2,7 @@ import Image from "next/image";
 import { arcadeIcon } from "@/public/assets/images";
 export default function Home() {
   return (
-    <form className="">
+    <form className="font-bold">
       <div id="tab">
         <h1>Personal info</h1>
         <p>Please provide your name, email address, and phone number.</p>
