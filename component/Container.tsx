@@ -1,8 +1,28 @@
 import React from "react";
+export type DataType = {
+  name: string;
+  email: string;
+  phone: string;
+  plan: Plan;
+  isYear: IsYear;
+  isOnlineService: boolean;
+  isLargerStorage: boolean;
+  isCustomizableProfile: boolean;
+};
+
+export enum Plan {
+  Arcade = "Arcade",
+  Advanced = "Advanced",
+  Pro = "Pro",
+}
+export enum IsYear {
+  true = "TRUE",
+  false = "False",
+}
 
 function Container({ children }: { children: React.ReactNode }) {
   return (
-    <main className="font-bold ">
+    <main className="">
       <div className="">
         <div className=" ">
           <ul className="">
