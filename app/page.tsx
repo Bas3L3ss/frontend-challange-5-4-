@@ -37,9 +37,18 @@ export default function Home() {
   };
 
   return (
-    <form className="font-bold underline" onSubmit={handleSubmit}>
-      <Tabs step={state.step} data={data} setData={setData} />
-      <Buttons prevTab={prevTab} nextTab={nextTab} step={state.step} />
+    <form className=" " onSubmit={handleSubmit}>
+      <div className="px-6">
+        <div className="lg:h-[100vh] shadow-md p-7 mx-auto lg:mt-0 -mt-28 rounded-md bg-white z-9 relative">
+          <Tabs step={state.step} data={data} setData={setData} />
+          <div className="lg:block invisible hidden lg:visible">
+            <Buttons prevTab={prevTab} nextTab={nextTab} step={state.step} />
+          </div>
+        </div>
+      </div>
+      <div className="lg:invisible lg:hidden">
+        <Buttons prevTab={prevTab} nextTab={nextTab} step={state.step} />
+      </div>
     </form>
   );
 }

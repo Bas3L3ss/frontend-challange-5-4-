@@ -1,5 +1,6 @@
 import { DataType } from "@/utils/type-enums";
 import React, { Dispatch, SetStateAction } from "react";
+import Title from "./Title";
 
 function Tab1({
   data,
@@ -10,33 +11,59 @@ function Tab1({
 }) {
   return (
     <div id="tab1">
-      <h1>Personal info</h1>
-      <p>Please provide your name, email address, and phone number.</p>
-      <div className="">
-        <label htmlFor="name">Name</label>
-        <p>This field is required</p>
+      <Title
+        title="Personal info"
+        sub="Please provide your name, email, address, and phone number. "
+      />
+      <div className="flex text-sm mt-5 justify-between">
+        <label
+          className="text-sm text-primary-marine-blue font-semibold"
+          htmlFor="name"
+        >
+          Name
+        </label>
+        <label className="text-primary-strawberry-red" htmlFor="name">
+          This field is required
+        </label>
       </div>
       <input
+        className="w-full border py-2 px-3"
         type="text"
         name="name"
         id="name"
         placeholder="e.g. Stephen King"
       />
-      <div className="">
-        <label htmlFor="email">Email Address</label>
-        <p>This field is required</p>
+      <div className="flex text-sm mt-5 justify-between">
+        <label
+          className="text-sm text-primary-marine-blue font-semibold"
+          htmlFor="email"
+        >
+          Email Address
+        </label>
+        <label className="text-primary-strawberry-red" htmlFor="email">
+          This field is required
+        </label>
       </div>
       <input
+        className="w-full border py-2 px-3"
         type="text"
         name="email"
         id="email"
         placeholder="e.g. stephenking@lorem.com"
       />
-      <div className="">
-        <label htmlFor="phone">Phone Number</label>
-        <p>This field is required</p>
+      <div className="flex text-sm mt-5 justify-between">
+        <label
+          className="text-sm text-primary-marine-blue font-semibold"
+          htmlFor="phone"
+        >
+          Phone Number
+        </label>
+        <label className="text-primary-strawberry-red" htmlFor="phone">
+          This field is required
+        </label>
       </div>
       <input
+        className="w-full border py-2 px-3"
         type="text"
         name="phone"
         id="phone"

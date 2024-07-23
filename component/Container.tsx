@@ -17,28 +17,38 @@ function Container({ children }: { children: React.ReactNode }) {
   ];
 
   return (
-    <main className="  ">
-      <div className="">
-        <div className=" ">
-          <ul className="">
+    <main className="">
+      <div className="lg:grid   grid-cols-[300px,1fr] relative bg-neutral-magnolia h-[100vh]  ">
+        <div className=" lg:p-5  lg:bg-pattern-desktop bg-pattern-mobile  bg-no-repeat bg-cover bg-center ">
+          <ul className="  flex lg:flex-col flex-row min-h-[198px] justify-center gap-4">
             {indicators.map((indicator) => {
               return (
-                <li key={indicator.number}>
-                  <span
-                    className={` ${
-                      step == indicator.number - 1 ? "text-red-600" : ""
-                    } ${
+                <li
+                  className="mt-3 lg:flex items-center gap-2 "
+                  key={indicator.number}
+                >
+                  <p
+                    className={`border border-neutral-alabaster 
+                      rounded-full h-8 w-8   flex justify-center items-center font-semibold  ${
+                        step == indicator.number - 1
+                          ? "text-primary-marine-blue bg-primary-pastel-blue border-primary-pastel-blue"
+                          : "text-neutral-alabaster "
+                      } ${
                       indicator.number == indicators.length &&
                       step === indicators.length
-                        ? "text-red-600"
+                        ? "text-primary-marine-blue bg-primary-pastel-blue border-primary-pastel-blue"
                         : ""
-                    }`}
+                    } text-base`}
                   >
                     {indicator.number}
-                  </span>
-                  <div className="">
-                    <p>Step {indicator.number}</p>
-                    <h4 className=" ">{indicator.info}</h4>
+                  </p>
+                  <div className="lg:inline hidden">
+                    <p className="text-neutral-cool-gray text-sm font-light">
+                      Step {indicator.number}
+                    </p>
+                    <h4 className=" lg:inline hidden text-lg font-bold text-white ">
+                      {indicator.info}
+                    </h4>
                   </div>
                 </li>
               );

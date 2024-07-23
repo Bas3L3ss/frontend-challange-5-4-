@@ -10,11 +10,17 @@ function Buttons({
   step: number;
 }) {
   return (
-    <div id="buttons" className="grid grid-cols-2">
+    <div
+      id="buttons"
+      className="flex text-neutral-light-gray font-semibold justify-between w-full  absolute bottom-0 right-0 py-4 h-[80px] px-4 bg-white"
+    >
+      <div
+        className={`px-10 ${
+          step >= 1 && step < 4 ? "invisible hidden" : "  "
+        }  `}
+      ></div>
       <button
-        type="button"
-        id="return"
-        className={`${
+        className={` w-32 p-2 ${
           step >= 1 && step < 4 ? "" : "invisible hidden  "
         }col-start-1 `}
         onClick={prevTab}
@@ -24,7 +30,9 @@ function Buttons({
       <button
         type="button"
         id="next"
-        className={`${step < 3 ? "" : "invisible hidden "} col-start-2`}
+        className={`rounded-md w-32 bg-primary-marine-blue text-white  p-2    ${
+          step < 3 ? "" : "invisible hidden "
+        } col-start-2`}
         onClick={nextTab}
       >
         Next Step
@@ -32,7 +40,9 @@ function Buttons({
       <button
         type="submit"
         id="next"
-        className={`${step === 3 ? "" : "invisible hidden   "} col-start-2`}
+        className={` rounded-md w-32 bg-primary-purplish-blue text-white  p-2  ${
+          step === 3 ? "" : "invisible hidden   "
+        } col-start-2`}
         onClick={nextTab}
       >
         Confirm

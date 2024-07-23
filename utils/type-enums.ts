@@ -9,6 +9,7 @@ export type DataType = {
   isCustomizableProfile: boolean;
   total: number;
 };
+
 export enum Plan {
   Arcade = "Arcade",
   Advanced = "Advanced",
