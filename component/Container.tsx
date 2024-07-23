@@ -1,62 +1,46 @@
-import React from "react";
-export type DataType = {
-  name: string;
-  email: string;
-  phone: string;
-  plan: Plan;
-  isYear: IsYear;
-  isOnlineService: boolean;
-  isLargerStorage: boolean;
-  isCustomizableProfile: boolean;
-};
-
-export enum Plan {
-  Arcade = "Arcade",
-  Advanced = "Advanced",
-  Pro = "Pro",
-}
-export enum IsYear {
-  true = "TRUE",
-  false = "False",
-}
+import { useMyContext } from "@/app/provider";
+import React, { useEffect, useState } from "react";
 
 function Container({ children }: { children: React.ReactNode }) {
+  const { state, setState } = useMyContext();
+  const [step, setStep] = useState(state.step);
+
+  useEffect(() => {
+    setStep(state.step);
+  }, [state.step]);
+
+  const indicators = [
+    { number: 1, info: "Your info" },
+    { number: 2, info: "Select plan" },
+    { number: 3, info: "Add-ons" },
+    { number: 4, info: "Summary" },
+  ];
+
   return (
-    <main className="">
+    <main className="  ">
+      <h1 className="text-3xl font-bold underline">Hello world!</h1>
       <div className="">
         <div className=" ">
           <ul className="">
-            <li className=" ">
-              <span className=" ">1</span>
-              <div className="">
-                <p>Step 1</p>
-                <h4 className=" ">Your info</h4>
-              </div>
-            </li>
-            <li className="">
-              <span className="">2</span>
-
-              <div className="">
-                <p>Step 2</p>
-                <h4 className="">Select plan</h4>
-              </div>
-            </li>
-            <li className="">
-              <span className="">3</span>
-
-              <div className="">
-                <p>Step 3</p>
-                <h4 className="">Add-ons</h4>
-              </div>
-            </li>
-            <li className="">
-              <span className="">4</span>
-
-              <div className="">
-                <p>Step 4</p>
-                <h4 className="">Summary</h4>
-              </div>
-            </li>
+            {indicators.map((indicator) => {
+              return (
+                <li key={indicator.number}>
+                  <span
+                    className={` ${
+                      step == indicator.number - 1 ? "text-red-600" : ""
+                    } ${
+                      indicator.number == 4 && step === 4 ? "text-red-600" : ""
+                    }`}
+                  >
+                    {indicator.number}
+                  </span>
+                  <div className="">
+                    <p>Step {indicator.number}</p>
+                    <h4 className=" ">{indicator.info}</h4>
+                  </div>
+                </li>
+              );
+            })}
           </ul>
         </div>
         {children}
