@@ -6,6 +6,7 @@ import Client from "@/component/Client";
 
 const ubuntu = Ubuntu({ subsets: ["latin"], weight: ["400", "500", "700"] });
 export const metadata: Metadata = {
+  icons: "/assets/images/favicon-32x32.png",
   title: "Multi-step form - from FrontEndMentor ",
   description: "Front end challenge",
 };
