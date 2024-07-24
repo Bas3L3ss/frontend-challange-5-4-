@@ -1,25 +1,16 @@
 "use client";
 import { useMyContext } from "./provider";
-import { DataType, Plan } from "@/utils/type-enums";
+import { DataType } from "@/utils/type-enums";
 import { FormEvent, useState } from "react";
 import Buttons from "@/component/Buttons";
 import Tabs from "@/component/Tabs";
 import { validation } from "@/utils/action";
+import { rawData } from "@/utils/data";
 
 export default function Home() {
   const { state, setState } = useMyContext();
 
-  const [data, setData] = useState<DataType>({
-    name: "",
-    email: "",
-    phone: "",
-    plan: Plan.Arcade,
-    isYear: false,
-    isOnlineService: false,
-    isLargerStorage: false,
-    isCustomizableProfile: false,
-    total: 0,
-  });
+  const [data, setData] = useState<DataType>(rawData);
 
   const nextTab = () => {
     const flag = validation(state.step, data);

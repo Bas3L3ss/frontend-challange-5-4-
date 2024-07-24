@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Tab5() {
   return (
-    <div className="flex flex-col items-center p-10 lg:p-28">
+    <div className="flex flex-col items-center p-10 text-pretty lg:p-28">
       <Image className="mb-5" src={thankyouIcon} alt="" />
       <h1 className="mb-2 text-2xl font-bold text-primary-marine-blue">
         Thank you!

@@ -20,6 +20,7 @@ function Buttons({
         }  `}
       ></div>
       <button
+        type="button"
         className={` w-32 p-2 ${
           step >= 1 && step < 4 ? "" : "invisible hidden  "
         }col-start-1 `}

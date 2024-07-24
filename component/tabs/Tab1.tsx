@@ -1,6 +1,6 @@
 import { DataType } from "@/utils/type-enums";
 import React, { Dispatch, SetStateAction } from "react";
-import Title from "./Title";
+import Title from "../Title";
 
 function Tab1({
   data,
@@ -15,9 +15,9 @@ function Tab1({
         title="Personal info"
         sub="Please provide your name, email, address, and phone number. "
       />
-      <div className="flex text-sm mt-5 justify-between">
+      <div className="flex justify-between mt-5 text-sm">
         <label
-          className="text-sm text-primary-marine-blue font-semibold"
+          className="text-sm font-semibold text-primary-marine-blue"
           htmlFor="name"
         >
           Name
@@ -27,15 +27,15 @@ function Tab1({
         </label>
       </div>
       <input
-        className="w-full border py-2 px-3"
+        className="w-full px-3 py-2 border"
         type="text"
         name="name"
         id="name"
         placeholder="e.g. Stephen King"
       />
-      <div className="flex text-sm mt-5 justify-between">
+      <div className="flex justify-between mt-5 text-sm">
         <label
-          className="text-sm text-primary-marine-blue font-semibold"
+          className="text-sm font-semibold text-primary-marine-blue"
           htmlFor="email"
         >
           Email Address
@@ -45,15 +45,15 @@ function Tab1({
         </label>
       </div>
       <input
-        className="w-full border py-2 px-3"
+        className="w-full px-3 py-2 border"
         type="text"
         name="email"
         id="email"
         placeholder="e.g. stephenking@lorem.com"
       />
-      <div className="flex text-sm mt-5 justify-between">
+      <div className="flex justify-between mt-5 text-sm">
         <label
-          className="text-sm text-primary-marine-blue font-semibold"
+          className="text-sm font-semibold text-primary-marine-blue"
           htmlFor="phone"
         >
           Phone Number
@@ -63,7 +63,7 @@ function Tab1({
         </label>
       </div>
       <input
-        className="w-full border py-2 px-3"
+        className="w-full px-3 py-2 border"
         type="text"
         name="phone"
         id="phone"

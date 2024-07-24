@@ -2,7 +2,7 @@ export type DataType = {
   name: string;
   email: string;
   phone: string;
-  plan: Plan;
+  plan: PlanEnum;
   isYear: boolean;
   isOnlineService: boolean;
   isLargerStorage: boolean;
@@ -10,8 +10,22 @@ export type DataType = {
   total: number;
 };
 
-export enum Plan {
+export enum PlanEnum {
   Arcade = "Arcade",
   Advanced = "Advanced",
   Pro = "Pro",
 }
+
+export type PlanType = {
+  icon: string;
+  name: PlanEnum;
+  price: number;
+};
+
+export type AddonsType = {
+  title: string;
+  info: string;
+  price: number;
+  isActive: boolean;
+  target: keyof DataType;
+};
