@@ -44,7 +44,7 @@ function Tab4({
               {data.plan} ({isYear ? "Yearly" : "Monthly"})
             </p>
             <button
-              className="underline text-neutral-cool-gray"
+              className="underline hover:text-primary-purplish-blue text-neutral-cool-gray"
               type="button"
               onClick={() => setState({ ...state, step: 1 })}
             >

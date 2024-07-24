@@ -51,7 +51,7 @@ function Tab3({
             <label
               htmlFor={`${item.title}`}
               key={item.title}
-              className={`flex items-center flex-1 p-4 text-left border rounded-md ${
+              className={`cursor-pointer hover:border-primary-purplish-blue flex items-center flex-1 p-4 text-left border rounded-md ${
                 item.isActive ? "border-primary-purplish-blue" : ""
               }  `}
             >

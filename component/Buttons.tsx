@@ -21,7 +21,7 @@ function Buttons({
       ></div>
       <button
         type="button"
-        className={` w-32 p-2 ${
+        className={`hover:text-primary-marine-blue  w-32 p-2 ${
           step >= 1 && step < 4 ? "" : "invisible hidden  "
         }col-start-1 `}
         onClick={prevTab}
@@ -31,7 +31,7 @@ function Buttons({
       <button
         type="button"
         id="next"
-        className={`rounded-md w-32 bg-primary-marine-blue text-white  p-2    ${
+        className={`hover:bg-primary-marine-blue rounded-md w-32 bg-black text-white  p-2    ${
           step < 3 ? "" : "invisible hidden "
         } col-start-2`}
         onClick={nextTab}
@@ -41,7 +41,7 @@ function Buttons({
       <button
         type="submit"
         id="next"
-        className={` rounded-md w-32 bg-primary-purplish-blue text-white  p-2  ${
+        className={` hover:bg-primary-pastel-blue rounded-md w-32 bg-primary-purplish-blue text-white  p-2  ${
           step === 3 ? "" : "invisible hidden   "
         } col-start-2`}
         onClick={nextTab}

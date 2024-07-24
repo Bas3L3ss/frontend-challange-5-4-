@@ -48,6 +48,7 @@ export const rawData: DataType = {
   isLargerStorage: false,
   isCustomizableProfile: false,
   total: 0,
+  error: [],
 };
 
 export const addonsPrice = [

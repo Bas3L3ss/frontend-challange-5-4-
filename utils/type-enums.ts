@@ -8,13 +8,8 @@ export type DataType = {
   isLargerStorage: boolean;
   isCustomizableProfile: boolean;
   total: number;
+  error: ErrorType[];
 };
-
-export enum PlanEnum {
-  Arcade = "Arcade",
-  Advanced = "Advanced",
-  Pro = "Pro",
-}
 
 export type PlanType = {
   icon: string;
@@ -29,3 +24,14 @@ export type AddonsType = {
   isActive: boolean;
   target: keyof DataType;
 };
+
+export type ErrorType = {
+  index: number;
+  errorMsg: string;
+};
+
+export enum PlanEnum {
+  Arcade = "Arcade",
+  Advanced = "Advanced",
+  Pro = "Pro",
+}

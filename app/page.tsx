@@ -13,10 +13,15 @@ export default function Home() {
   const [data, setData] = useState<DataType>(rawData);
 
   const nextTab = () => {
-    const flag = validation(state.step, data);
-    if (flag) {
+    const errorCheck = validation(state.step, data);
+
+    if (errorCheck.length == 0) {
+      setData((prev) => ({ ...prev, error: [] }));
       setState({ ...state, step: state.step + 1 });
+    } else {
+      setData((prev) => ({ ...prev, error: errorCheck }));
     }
+    console.log(data.error);
   };
   const prevTab = () => {
     setState({ ...state, step: state.step - 1 });

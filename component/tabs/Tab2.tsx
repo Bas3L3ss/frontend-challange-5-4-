@@ -35,8 +35,11 @@ function Tab2({
             <button
               type="button"
               className={`
+                hover:border-primary-purplish-blue
               shadow-md ${
-                data.plan === item.name ? "border-primary-purplish-blue " : ""
+                data.plan === item.name
+                  ? "border-primary-purplish-blue bg-neutral-magnolia"
+                  : ""
               }
               flex-1
               rounded-md border  gap-5 flex items-center min-h-[80px] px-4`}
