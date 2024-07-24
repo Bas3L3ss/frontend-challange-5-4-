@@ -1,10 +1,13 @@
+import { ErrorType } from "@/utils/type-enums";
 import React, { SetStateAction } from "react";
 
 function Buttons({
+  error,
   prevTab,
   nextTab,
   step,
 }: {
+  error: ErrorType[];
   prevTab: () => void;
   nextTab: () => void;
   step: number;

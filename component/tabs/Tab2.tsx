@@ -54,6 +54,9 @@ function Tab2({
                 <p id="pricing" className="text-sm text-neutral-cool-gray">
                   ${price}/{date}
                 </p>
+                <p className="text-sm font-semibold text-neutral-cool-gray">
+                  {data.isYear ? "2 months free" : ""}
+                </p>
               </div>
             </button>
           );

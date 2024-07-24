@@ -38,12 +38,22 @@ export default function Home() {
         <div className="lg:h-[100vh] shadow-md p-7 lg:p-16 mx-auto lg:mt-0 -mt-28 rounded-md bg-white z-9 relative">
           <Tabs step={state.step} data={data} setData={setData} />
           <div className="invisible hidden lg:block lg:visible">
-            <Buttons prevTab={prevTab} nextTab={nextTab} step={state.step} />
+            <Buttons
+              error={data.error}
+              prevTab={prevTab}
+              nextTab={nextTab}
+              step={state.step}
+            />
           </div>
         </div>
       </div>
       <div className="lg:invisible lg:hidden">
-        <Buttons prevTab={prevTab} nextTab={nextTab} step={state.step} />
+        <Buttons
+          error={data.error}
+          prevTab={prevTab}
+          nextTab={nextTab}
+          step={state.step}
+        />
       </div>
     </form>
   );
