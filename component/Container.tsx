@@ -1,3 +1,4 @@
+"use client";
 import { useMyContext } from "@/app/provider";
 import React, { useEffect, useState } from "react";
 
@@ -19,12 +20,12 @@ function Container({ children }: { children: React.ReactNode }) {
   return (
     <main className="">
       <div className="lg:grid   grid-cols-[300px,1fr] relative bg-neutral-magnolia h-[100vh]  ">
-        <div className=" lg:p-5  lg:bg-pattern-desktop bg-pattern-mobile  bg-no-repeat bg-cover bg-center ">
+        <div className="bg-center bg-no-repeat bg-cover lg:p-5 lg:bg-pattern-desktop bg-pattern-mobile">
           <ul className="  flex lg:flex-col flex-row min-h-[198px] justify-center gap-4">
             {indicators.map((indicator) => {
               return (
                 <li
-                  className="mt-3 lg:flex items-center gap-2 "
+                  className="items-center gap-2 mt-3 lg:flex "
                   key={indicator.number}
                 >
                   <p
@@ -42,11 +43,11 @@ function Container({ children }: { children: React.ReactNode }) {
                   >
                     {indicator.number}
                   </p>
-                  <div className="lg:inline hidden">
-                    <p className="text-neutral-cool-gray text-sm font-light">
+                  <div className="hidden lg:inline">
+                    <p className="text-sm font-light text-neutral-cool-gray">
                       Step {indicator.number}
                     </p>
-                    <h4 className=" lg:inline hidden text-lg font-bold text-white ">
+                    <h4 className="hidden text-lg font-bold text-white lg:inline">
                       {indicator.info}
                     </h4>
                   </div>

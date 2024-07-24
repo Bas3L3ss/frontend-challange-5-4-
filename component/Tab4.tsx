@@ -1,3 +1,4 @@
+"use client";
 import { useMyContext } from "@/app/provider";
 import { DataType } from "@/utils/type-enums";
 import { Dispatch, SetStateAction } from "react";

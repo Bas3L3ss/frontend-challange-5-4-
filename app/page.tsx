@@ -37,11 +37,11 @@ export default function Home() {
   };
 
   return (
-    <form className=" " onSubmit={handleSubmit}>
+    <form className="" onSubmit={handleSubmit}>
       <div className="px-6">
-        <div className="lg:h-[100vh] shadow-md p-7 mx-auto lg:mt-0 -mt-28 rounded-md bg-white z-9 relative">
+        <div className="lg:h-[100vh] shadow-md p-7 lg:p-16 mx-auto lg:mt-0 -mt-28 rounded-md bg-white z-9 relative">
           <Tabs step={state.step} data={data} setData={setData} />
-          <div className="lg:block invisible hidden lg:visible">
+          <div className="invisible hidden lg:block lg:visible">
             <Buttons prevTab={prevTab} nextTab={nextTab} step={state.step} />
           </div>
         </div>
