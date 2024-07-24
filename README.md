@@ -42,8 +42,8 @@ btw: i think addons shouldn't be compulsory so i discarded the last requirement.
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [click me](https://github.com/Bas3L3ss/frontend-challange-5-4-)
+- Hosted App - [click me](https://frontend-challange-5-4.vercel.app/)
 
 ## My process
 
@@ -62,6 +62,5 @@ btw: i think addons shouldn't be compulsory so i discarded the last requirement.
 
 I've learned quite a lot, especially in honing my self-research skills. Additionally, I've gained more knowledge throughout the coding process.
 
-- Github - [Bas3L3ss](https://github.com/Bas3L3ss/frontend-challange-5-4-)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Hosted App - [Multi-step form](https://frontend-challange-5-4.vercel.app/)
+- Github - [Bas3L3ss](https://github.com/Bas3L3ss)
+- Frontend Mentor - [@Bas3L3ss](https://www.frontendmentor.io/profile/Bas3L3ss)
